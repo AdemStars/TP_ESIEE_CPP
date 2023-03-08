@@ -12,7 +12,7 @@ test:
 	echo " ceci est un test pour git"
 
 client:#Permet d'exe le binaire client
-	./bin/client
+	./bin/client $(ip)
 
 server:#Permet d'exe le binaire server
 	./bin/server	
