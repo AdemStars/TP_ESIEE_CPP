@@ -10,7 +10,7 @@
 #define PORT 8080
 
 void log_command(char* command) {
-    FILE* log_file = fopen("./log.txt", "a");
+    FILE* log_file = fopen("/log.txt", "a");
     time_t current_time;
     char* time_string;
     time(&current_time);
