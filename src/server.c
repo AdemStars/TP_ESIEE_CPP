@@ -10,7 +10,7 @@
 #define PORT 8080
 
 void log_command(char* command) {
-    FILE* log_file = fopen("log.txt", "a");
+    FILE* log_file = fopen("./log.txt", "a");
     time_t current_time;
     char* time_string;
     time(&current_time);
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[]) {
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
-    char buffer[1024]
+    char buffer[1024];
         // Création de la socket
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("socket échouée");
