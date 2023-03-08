@@ -12,7 +12,7 @@
 
 // Fonction pour ajouter une commande au fichier de log
 void log_command(char* command) {
-    FILE* log_file = fopen("/log.txt", "a");                    // Ouvrir le fichier de log en mode ajout
+    FILE* log_file = fopen("./log.txt", "a");                    // Ouvrir le fichier de log en mode ajout
     time_t current_time;                                        // Obtenir l'heure actuelle et la formater en chaîne de caractères
     char* time_string;
     time(&current_time);
