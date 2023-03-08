@@ -1,17 +1,20 @@
-table:
-	gcc -o TP1 src/TP1.c -Wall
-	gcc -o tablemulti src/tablemulti.c -Wall
+##Makefile réaliser par le Groupe 5 (Adi, Lucas D., Landry, Thomas)
 
-clean :
-	rm TP1
-	rm tablemulti
+
+compil:##Permet de compiler les fichiers listés contenus dans le dossier src. Stocke les binaires dans le dossier bin
+	gcc src/client.c -o ./bin/client -Wall
+	gcc src/server.c -o ./bin/server -Wall
+
+clean :## Permet de supprimer tous les fichiers contenus dans bin
+	rm -r ./bin/*
 
 test:
 	echo " ceci est un test pour git"
 
-run:
-	./TP1 2 20
-	./tablemulti
-	
+client:#Permet d'exe le binaire client
+	./bin/client $(ip)
+
+server:#Permet d'exe le binaire server
+	./bin/server	
 	
 
