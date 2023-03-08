@@ -2,13 +2,14 @@
 
 
 compil:
-##Permet de compiler les fichiers listés contenus dans le dossier src. Stocke les binaires dans le dossier bin
+##Permet de créer le répertoire bin; compiler les fichiers listés contenus dans le dossier src; Stocke les binaires dans le dossier bin
+	mkdir ./bin
 	gcc src/client.c -o ./bin/client -Wall
 	gcc src/server.c -o ./bin/server -Wall
 
 clean :
-## Permet de supprimer tous les fichiers contenus dans bin
-	rm -r ./bin/*
+## Permet de supprimer le dossier bin
+	rm -r ./bin
 
 info:
 	echo "Bienvenue dans la page Info de notre Makefile"
